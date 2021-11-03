@@ -1,3 +1,9 @@
+
+import entities.User;
+
+
+
+
 import repositories.ProductRepository;
 import util.HibernateUtil;
 
@@ -14,13 +20,11 @@ public class Main {
         // Don't forget to change the User and Pass fields in HibernateUtil Class with
         // your own user and password!!
 
-        ProductRepository productRepository = new ProductRepository();
-        productRepository.showProducts();
 
-//        Scanner scanner = new Scanner(System.in);
-//        String character = scanner.nextLine();
-//        productRepository.showProductsBasedOnGender(character);
+        //TODO
+        // Apelare metode (in meniu) care afiseaza toate produsele, toate produsele bazate pe o marime,
+        // respectiv toate produsele bazate pe un gender!!
+
         HibernateUtil.shutdown();
-
     }
 }

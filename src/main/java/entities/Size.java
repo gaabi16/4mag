@@ -11,7 +11,7 @@ public class Size {
     @Column(name = "id_sizes")
     private Integer idSize;
 
-    private Character size;
+    private String size;
 
     @OneToMany(mappedBy = "size")
     private List<ProductDetails> productDetailsList;
@@ -36,11 +36,11 @@ public class Size {
         this.idSize = idSize;
     }
 
-    public Character getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(Character size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
