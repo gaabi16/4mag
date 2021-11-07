@@ -25,7 +25,7 @@ public class HibernateUtil {
 
                 settings.put(Environment.USER, "root"); // root
 
-                settings.put(Environment.PASS, "12345678"); // root
+                settings.put(Environment.PASS, "1234"); // root
 
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
                 settings.put(Environment.SHOW_SQL, "true");
