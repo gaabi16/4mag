@@ -21,4 +21,11 @@ public class FinalMethods {
         String option = scanner.nextLine();
         NeededMethods.showProductsBasedOnGender(option);
     }
+
+    public static void productsBasedOnBrand(){
+        SecondaryMenus.brandOptions();
+        Scanner scanner = new Scanner(System.in);
+        Integer option = scanner.nextInt();
+        NeededMethods.showProductsBasedOnBrand(option);
+    }
 }
