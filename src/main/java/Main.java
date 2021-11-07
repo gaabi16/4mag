@@ -1,10 +1,11 @@
 
+import SignUpLogin.SignUp;
 import entities.User;
 
 
-
-
+import menu.methods.FinalMethods;
 import repositories.ProductRepository;
+import repositories.UserRepository;
 import util.HibernateUtil;
 
 import java.util.Scanner;
@@ -23,8 +24,9 @@ public class Main {
 
         //TODO
         // Apelare metode (in meniu) care afiseaza toate produsele, toate produsele bazate pe o marime,
-        // respectiv toate produsele bazate pe un gender!!
 
+        // respectiv toate produsele bazate pe un gender!!
+        FinalMethods.SignUp();
         HibernateUtil.shutdown();
     }
 }

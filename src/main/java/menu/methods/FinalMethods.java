@@ -1,5 +1,9 @@
 package menu.methods;
 
+import SignUpLogin.SignUp;
+import entities.User;
+import repositories.UserRepository;
+
 import java.util.Scanner;
 
 public class FinalMethods {
@@ -20,5 +24,10 @@ public class FinalMethods {
         Scanner scanner = new Scanner(System.in);
         String option = scanner.nextLine();
         NeededMethods.showProductsBasedOnGender(option);
+    }
+    public static void SignUp(){
+        User user1 = SignUp.signUp();
+        UserRepository.createUser(user1);
+
     }
 }
