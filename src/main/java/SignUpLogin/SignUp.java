@@ -28,7 +28,11 @@ public class SignUp {
         email = input.next();
         System.out.print("password : ");
         password = input.next();
+<<<<<<< HEAD
        // System.out.print("usertype : ");
+=======
+        // System.out.print("usertype : ");
+>>>>>>> cd07b294ff3a48cbecdcfbf1bee2d95685666d0f
         //usertype = input.next();
         User user1 = new User();
         user1.setFirstName(firstname);
@@ -36,6 +40,11 @@ public class SignUp {
         user1.setEmail(email);
         user1.setPassword(password);
         return user1;
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cd07b294ff3a48cbecdcfbf1bee2d95685666d0f
 
 
 
@@ -62,6 +71,31 @@ public class SignUp {
             ex.printStackTrace();
         }
     }
+<<<<<<< HEAD
+    public void createClient(User client) {
+        String firstname;
+        Scanner input = new Scanner(System.in); // to obtain input from user
+        Transaction transaction = null;
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            // start a transaction
+            transaction = session.beginTransaction();
+            // save the person object
+            firstname = input.next();
+            session.save(client);
+            //session.addEventListeners(new User(firstname));
+            // commit transaction
+            transaction.commit();
+        } catch (Exception ex) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            ex.printStackTrace();
+        }
+    }
 
 }
+=======
+>>>>>>> cd07b294ff3a48cbecdcfbf1bee2d95685666d0f
 
+}

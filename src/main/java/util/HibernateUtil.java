@@ -9,6 +9,7 @@ import org.hibernate.service.ServiceRegistry;
 
 import java.util.Properties;
 
+
 public class HibernateUtil {
     private static SessionFactory sessionFactory;
 
@@ -21,11 +22,10 @@ public class HibernateUtil {
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
                 settings.put(Environment.URL, "jdbc:mysql://localhost:3306/4mag?serverTimezone=UTC");
+
                 settings.put(Environment.USER, "root"); // root
 
-
-
-                settings.put(Environment.PASS, "12345678"); // root
+                settings.put(Environment.PASS, "1234"); // root
 
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
                 settings.put(Environment.SHOW_SQL, "true");
