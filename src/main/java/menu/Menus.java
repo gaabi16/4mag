@@ -1,5 +1,7 @@
 package menu;
 
+import menu.methods.FinalMethods;
+
 import java.util.Scanner;
 
 public class Menus {
@@ -31,7 +33,7 @@ public class Menus {
                 break;
 
             case "2":
-
+                FinalMethods.products();
                 break;
 
             case "3":

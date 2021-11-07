@@ -25,6 +25,14 @@ public class Main {
         // Apelare metode (in meniu) care afiseaza toate produsele, toate produsele bazate pe o marime,
         // respectiv toate produsele bazate pe un gender!!
 
+        FinalMethods.productsBasedOnBrand();
+        System.out.println("\n\n\n\n");
+        FinalMethods.productsBasedOnGender();
+        System.out.println("\n\n\n\n");
+        FinalMethods.products();
+        System.out.println("\n\n\n\n");
+        FinalMethods.productsBasedOnSize();
+
         HibernateUtil.shutdown();
     }
 }

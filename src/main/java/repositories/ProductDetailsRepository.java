@@ -1,6 +1,5 @@
 package repositories;
 
-import entities.Product;
 import entities.ProductDetails;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -8,7 +7,6 @@ import util.HibernateUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class ProductDetailsRepository {
 
@@ -26,8 +24,6 @@ public class ProductDetailsRepository {
         }
     }
 
-
-
     public static List<ProductDetails> selectProductsBasedOnSize(Integer size) {
         List<ProductDetails> productList = new ArrayList<>();
         try {
@@ -42,9 +38,18 @@ public class ProductDetailsRepository {
         }
     }
 
-
-
-
-
+    public static List<ProductDetails> selectProductsBasedOnBrand(Integer brand){
+        List<ProductDetails> productDetailsList = new ArrayList<>();
+        try{
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            Query query = session.createQuery("from ProductDetails pd where pd.brand.idBrand=:brandName");
+            query.setParameter("brandName",brand);
+            productDetailsList = query.getResultList();
+            return productDetailsList;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 }
