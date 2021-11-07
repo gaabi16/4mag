@@ -1,7 +1,7 @@
 package repositories;
 
-import entities.*;
 import org.hibernate.HibernateException;
+import entities.ProductDetails;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -9,7 +9,6 @@ import util.HibernateUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class ProductDetailsRepository {
 
@@ -26,8 +25,6 @@ public class ProductDetailsRepository {
             return null;
         }
     }
-
-
 
     public static List<ProductDetails> selectProductsBasedOnSize(Integer size) {
         List<ProductDetails> productList = new ArrayList<>();
@@ -95,8 +92,4 @@ public class ProductDetailsRepository {
             ex.printStackTrace();
         }
     }
-
-
-
-
 }

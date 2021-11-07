@@ -1,16 +1,5 @@
-
-import entities.Product;
-import entities.User;
-
-
 import menu.Menus;
-import menu.methods.FinalMethods;
-import menu.methods.NeededMethods;
-import menu.methods.SecondaryMenus;
-import repositories.ProductRepository;
 import util.HibernateUtil;
-
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {

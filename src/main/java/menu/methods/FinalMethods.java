@@ -41,6 +41,7 @@ public class FinalMethods {
         NeededMethods.showProductsBasedOnBrand(option);
     }
 
+
     public static void buyProduct() {
 
         ProductDetails desiredProduct = NeededMethods.desiredProduct();
@@ -64,11 +65,5 @@ public class FinalMethods {
         } else {
             System.out.println("Ne pare rau. Produsul nu mai este pe stoc. Incercati un alt produs!");
         }
-
     }
-
-
-
-
-
 }
